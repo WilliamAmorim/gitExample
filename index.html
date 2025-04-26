@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="main.js" defer></script>
+    <title>Git</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Gerencie seus dados como um repositório!</h1>
+    </header>
+    <div class="logo-row">
+        <img src="resources/git.png" alt="Git Logo" class="logo">
+        <img src="resources/unifimes.png" alt="University Logo" class="logo">
+        <!-- <img src="resources/si.png" alt="Course Logo" class="logo"> -->
+      </div>
+          
+    <main>        
+        <button type="button" class="button blue mobile" id="gitcommit">git commit</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Autor do Commit</th>
+                    <th>E-mail do Git</th>
+                    <th>Token</th>
+                    <th>Alteração</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo commit</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="autor" data-index="new" class="modal-field" placeholder="Autor do Commit"required>
+                    <input type="email" id="emailGit" class="modal-field" placeholder="E-mail do Git" required>
+                    <input type="text" id="token" class="modal-field" placeholder="Token" required>
+                    <input type="text" id="descricao" class="modal-field" placeholder="Alteração" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">git commit</button>
+                    <button id="cancelar" class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+            <h3>V.1.2</h3>
+    </footer>
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-# gitExample
+# gitHubPage

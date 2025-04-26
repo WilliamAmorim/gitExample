@@ -1,0 +1,80 @@
+.button {
+    border: 1px solid #d73a49;
+    border-radius: 6px;
+    height: 40px;
+    padding: 6px 16px;
+    background-color: #f1502f; 
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e44e27;
+    box-shadow: 0 0 0 3px #f1502f66;
+}
+
+
+.button.commit {
+    background-color: #6f42c1;
+    color: #fff;
+    border: 1px solid #8257e6;
+}
+
+.button.commit:hover {
+    background-color: #8257e6;
+}
+
+.button.merge {
+    background-color: #2ea043; 
+    color: white;
+    border: 1px solid #238636;
+}
+
+.button.merge:hover {
+    background-color: #238636;
+}
+
+.button.delete {
+    background-color: #cf222e; 
+    color: white;
+    border: 1px solid #a40e26;
+}
+
+.button.delete:hover {
+    background-color: #a40e26;
+}
+
+
+@media(max-width:480px){
+    .button.mobile {
+        color: transparent;
+        font-size: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background-color: #f1502f;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .button.mobile::before {
+        content: "+";
+        color: white;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .button.mobile:hover {
+        background-color: #e44e27;
+    }
+}

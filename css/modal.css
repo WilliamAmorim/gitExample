@@ -1,0 +1,118 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 240, 232, 0.95);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding: 20px;
+    background-color: #fff3ed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 2px solid #f1502f;
+    border-radius: 10px;
+}
+
+.modal-header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2f1b12;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    user-select: none;
+    cursor: pointer;
+    color: #d73a49;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: #d73a49;
+    color: white;
+    border-radius: 4px;
+}
+
+.modal-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.modal-field {
+    width: calc(50% - 10px);
+    height: 40px;
+    outline: none;
+    border: 1px solid #d73a49;
+    background-color: #fffaf7;
+    color: #2f1b12;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-field:focus {
+    border: 1px solid #f1502f;
+    box-shadow: 0 0 5px #f1502f88;
+}
+
+.modal-footer {
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+
+@media (max-width: 480px) {
+    .modal {
+        top: 100%;
+        transition: top 0.6s ease, opacity 0.3s ease;
+    }
+
+    .modal.active {
+        top: 0;
+    }
+
+    .modal-content {
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .modal-field {
+        width: 100%;
+    }
+}

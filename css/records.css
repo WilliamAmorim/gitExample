@@ -1,0 +1,80 @@
+.records {
+    width: 100%;
+    user-select: none;
+    text-align: left;
+    border-collapse: collapse;
+    color: #2f1b12;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.records th {
+    height: 50px;
+    background-color: #fff3ed;
+    border-bottom: 2px solid #f1502f;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #d73a49;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.records td {
+    height: 50px;
+    padding-left: 20px;
+    background-color: #fffaf7;
+    border-bottom: 1px solid #fcd9cc;
+    transition: background-color 0.3s ease;
+}
+
+.records th:last-child,
+.records td:last-child {
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.records tr:hover td {
+    background-color: #ffe3d9;
+}
+
+@media(max-width: 480px) {
+    .records {
+        border-spacing: 5px;
+    }
+
+    .records thead {
+        display: none;
+    }
+
+    .records tr {
+        display: block;
+        margin-bottom: 15px;
+        background-color: #fff3ed;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .records td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid #fcd9cc;
+        background-color: transparent;
+    }
+
+    .records td:first-child {
+        font-weight: bold;
+        color: #f1502f;
+    }
+
+    .records td:last-child {
+        justify-content: center;
+    }
+
+    .records tr:hover td {
+        background-color: inherit;
+    }
+}
